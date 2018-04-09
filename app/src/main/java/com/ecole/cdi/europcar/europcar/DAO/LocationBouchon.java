@@ -9,7 +9,11 @@ import java.util.List;
 
 public class LocationBouchon implements ILocationDAO {
 
+    private List<Vehicule> vehicules;
 
+    public LocationBouchon() {
+        this.generateVehicules();
+    }
 
     @Override
     public Utilisateur connexion(String username, String password) {
@@ -23,13 +27,7 @@ public class LocationBouchon implements ILocationDAO {
 
     @Override
     public List<Vehicule> getListVehicule() {
-        List<Vehicule> vehicules = new ArrayList<>();
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
-
-        return vehicules;
+        return this.vehicules;
     }
 
     @Override
@@ -50,5 +48,12 @@ public class LocationBouchon implements ILocationDAO {
     @Override
     public void generateAgence() {
 
+    }
+
+    private void generateVehicules() {
+        vehicules.add(new Vehicule(1, "Renault", "Clio", "AA-000-AA"));
+        vehicules.add(new Vehicule(2, "Peugeot", "3008", "BB-111-BB"));
+        vehicules.add(new Vehicule(3, "Ferrari", "F430", "CC-222-CC"));
+        vehicules.add(new Vehicule(4, "Porsche", "Panamera", "DD-333-DD"));
     }
 }
