@@ -1,7 +1,5 @@
 package com.ecole.cdi.europcar.europcar.Service;
 
-import android.content.Context;
-
 import com.ecole.cdi.europcar.europcar.DAO.ILocationDAO;
 import com.ecole.cdi.europcar.europcar.DAO.LocationBouchon;
 import com.ecole.cdi.europcar.europcar.Entity.Agence;
@@ -22,16 +20,17 @@ public class LocationService {
     }
 
     public Utilisateur connexion(String username, String password) {
-        return null;
+        Utilisateur user =  dao.connexion(username,password);
+
+        return user;
     }
 
     public Utilisateur inscription(Utilisateur user) {
-        return null;
+        return user;
     }
 
     public List<Vehicule> getListVehicule() {
-
-        return this.dao.getListVehicule();
+        return null;
     }
 
     public Boolean louer(Vehicule vehicule, Utilisateur user) {
@@ -43,6 +42,10 @@ public class LocationService {
     }
 
     public void modifierAgence(Agence agence) {
+
+    }
+
+    public void generateAgence() {
 
     }
 }
