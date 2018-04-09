@@ -9,16 +9,18 @@ import java.util.List;
 
 public class LocationBouchon implements ILocationDAO {
 
-
-
     @Override
     public Utilisateur connexion(String username, String password) {
-        return new Utilisateur();
+
+        Utilisateur user = new Utilisateur(1,"bourdel","azerty","theo.bourdel@gmail.com");
+
+        return user;
     }
 
     @Override
     public Utilisateur inscription(Utilisateur user) {
-        return new Utilisateur();
+
+        return user;
     }
 
     @Override
