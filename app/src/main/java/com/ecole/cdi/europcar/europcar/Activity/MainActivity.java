@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.ecole.cdi.europcar.europcar.ConnexionFragment;
+import com.ecole.cdi.europcar.europcar.Fragment.ConnexionFragment;
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
 import com.ecole.cdi.europcar.europcar.R;
 import com.ecole.cdi.europcar.europcar.Service.LocationService;

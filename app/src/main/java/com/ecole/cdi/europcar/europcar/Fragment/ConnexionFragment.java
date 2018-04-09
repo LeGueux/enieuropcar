@@ -1,7 +1,6 @@
-package com.ecole.cdi.europcar.europcar;
+package com.ecole.cdi.europcar.europcar.Fragment;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,16 +9,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ecole.cdi.europcar.europcar.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link InscriptionFragment.OnInscriptionListener} interface
+ * {@link ConnexionFragment.OnConnexionListener} interface
  * to handle interaction events.
- * Use the {@link InscriptionFragment#newInstance} factory method to
+ * Use the {@link ConnexionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InscriptionFragment extends Fragment {
+public class ConnexionFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,14 +30,13 @@ public class InscriptionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private Button inscription;
+    private Button connecter;
     private EditText login;
     private EditText mdp;
-    private EditText email;
 
-    private OnInscriptionListener mListener;
+    private OnConnexionListener mListener;
 
-    public InscriptionFragment() {
+    public ConnexionFragment() {
         // Required empty public constructor
     }
 
@@ -46,11 +46,11 @@ public class InscriptionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment InscriptionFragment.
+     * @return A new instance of fragment ConnexionFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static InscriptionFragment newInstance(String param1, String param2) {
-        InscriptionFragment fragment = new InscriptionFragment();
+    public static ConnexionFragment newInstance(String param1, String param2) {
+        ConnexionFragment fragment = new ConnexionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -71,27 +71,28 @@ public class InscriptionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_inscription, container, false);
+        View v = inflater.inflate(R.layout.fragment_connexion, container, false);
 
-        this.login = v.findViewById(R.id.inscr_login);
-        this.mdp = v.findViewById(R.id.inscr_password);
-        this.inscription = v.findViewById(R.id.btn_inscription);
-        this.email = v.findViewById(R.id.inscr_email);
-        this.inscription.setOnClickListener(new View.OnClickListener() {
+        this.login = v.findViewById(R.id.login);
+        this.mdp = v.findViewById(R.id.password);
+        this.connecter = v.findViewById(R.id.btn_connexion);
+        this.connecter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.OnInscription(login.getText().toString(), mdp.getText().toString(),email.getText().toString());
+                mListener.onConnexion(login.getText().toString(),mdp.getText().toString());
             }
         });
+
 
         return v;
     }
 
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnInscriptionListener) {
-            mListener = (OnInscriptionListener) context;
+        if (context instanceof OnConnexionListener) {
+            mListener = (OnConnexionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -114,8 +115,8 @@ public class InscriptionFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnInscriptionListener {
+    public interface OnConnexionListener {
         // TODO: Update argument type and name
-        void OnInscription(String login, String password, String email);
+        void onConnexion(String login, String mdp);
     }
 }

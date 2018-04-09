@@ -30,7 +30,7 @@ public class LocationService {
     }
 
     public List<Vehicule> getListVehicule() {
-        return null;
+        return dao.getListVehicule();
     }
 
     public Boolean louer(Vehicule vehicule, Utilisateur user) {
@@ -42,7 +42,6 @@ public class LocationService {
     }
 
     public void modifierAgence(Agence agence) {
-
     }
 
     public void generateAgence() {

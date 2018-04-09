@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
-import com.ecole.cdi.europcar.europcar.InscriptionFragment;
+import com.ecole.cdi.europcar.europcar.Fragment.InscriptionFragment;
 import com.ecole.cdi.europcar.europcar.R;
 import com.ecole.cdi.europcar.europcar.Service.LocationService;
 
