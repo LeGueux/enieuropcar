@@ -10,7 +10,7 @@ import java.util.List;
 
 public class LocationService {
     private static final LocationService ourInstance = new LocationService();
-    private LocationBouchon dao;
+    private ILocationDAO dao = new LocationBouchon();
 
     public static LocationService getInstance() {
         return ourInstance;
@@ -20,8 +20,6 @@ public class LocationService {
     }
 
     public Utilisateur connexion(String username, String password) {
-
-        dao = new LocationBouchon();
         Utilisateur user =  dao.connexion(username,password);
 
         return user;
