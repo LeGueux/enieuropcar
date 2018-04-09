@@ -9,10 +9,10 @@ import java.util.List;
 
 public class LocationBouchon implements ILocationDAO {
 
-    private List<Vehicule> vehicules;
+    private List<Vehicule> vehicules = new ArrayList<>();
 
     public LocationBouchon() {
-        this.generateVehicules();
+        this.vehicules = this.generateVehicules();
     }
 
     @Override
@@ -50,10 +50,11 @@ public class LocationBouchon implements ILocationDAO {
 
     }
 
-    private void generateVehicules() {
+    private List<Vehicule> generateVehicules() {
         vehicules.add(new Vehicule(1, "Renault", "Clio", "AA-000-AA"));
         vehicules.add(new Vehicule(2, "Peugeot", "3008", "BB-111-BB"));
         vehicules.add(new Vehicule(3, "Ferrari", "F430", "CC-222-CC"));
         vehicules.add(new Vehicule(4, "Porsche", "Panamera", "DD-333-DD"));
+        return vehicules;
     }
 }
