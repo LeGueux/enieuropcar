@@ -55,8 +55,8 @@ public class ListeVehiculeFragment extends Fragment {
 
     public void setListe(List<Vehicule> v) {
         this.vehicules = v;
-        ListView listeVehicules = this.getView()
-                .findViewById(R.id.liste_vehicules);
+        ListView listeVehicules = this.getView().findViewById(R.id.liste_vehicules);
+
         VehiculeAdapter adapter = new VehiculeAdapter(
                 this.getContext(),
                 R.layout.ligne_vehicule,

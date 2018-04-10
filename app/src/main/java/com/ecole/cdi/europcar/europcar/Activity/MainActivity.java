@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
             Toast.makeText(this,
                     "Connexion validée : " + login + " - " + user.getEmail(),
                     Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, ListeVehiculesActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(this,
                     "Connexion refusée",

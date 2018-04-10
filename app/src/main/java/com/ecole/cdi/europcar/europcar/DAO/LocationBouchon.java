@@ -26,10 +26,12 @@ public class LocationBouchon implements ILocationDAO {
     @Override
     public List<Vehicule> getListVehicule() {
         List<Vehicule> vehicules = new ArrayList<>();
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
-        vehicules.add(new Vehicule());
+        vehicules.add(new Vehicule(1, "Renault", "Clio", "AA-000-BB"));
+        vehicules.add(new Vehicule(2, "Peugeot", "3008", "BB-111-AA"));
+        vehicules.add(new Vehicule(3, "Porsche", "Cayenne", "FF-897-FG"));
+        vehicules.add(new Vehicule(4, "Ferrari", "F430", "HH-564-YU"));
+        vehicules.add(new Vehicule(5, "BMW", "X6", "ZZ-444-ZZ"));
+        vehicules.add(new Vehicule(6, "Audi", "TT RS", "HH-232-YY"));
 
         return vehicules;
     }

@@ -31,9 +31,13 @@ public class VehiculeAdapter extends ArrayAdapter<Vehicule> {
             convertView = inflater.inflate(this.layout, parent, false);
         }
 
-        TextView marqueVoiture = convertView.findViewById(R.id.marque_voiture);
         Vehicule vehicule = this.getItem(position);
+        TextView marqueVoiture = convertView.findViewById(R.id.marque_voiture);
+        TextView modeleVoiture = convertView.findViewById(R.id.modele_voiture);
+        TextView immatriculationVoiture = convertView.findViewById(R.id.immatriculation_voiture);
         marqueVoiture.setText(vehicule.getMarque());
+        modeleVoiture.setText(vehicule.getModele());
+        immatriculationVoiture.setText(vehicule.getImmatriculation());
 
         return convertView;
     }
