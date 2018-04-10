@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Europcar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="authentication">Authentification</string>
+    <string name="password">Mot de passe</string>
+    <string name="sign_up">Inscription</string>
+    <string name="sign_in">Se connecter</string>
+
+    <string name="create_account">Créer votre compte utilisateur</string>
+    <string name="submit_account">Créer un compte</string>
+</resources>

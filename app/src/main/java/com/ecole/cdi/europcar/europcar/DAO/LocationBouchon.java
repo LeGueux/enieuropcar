@@ -54,5 +54,7 @@ public class LocationBouchon implements ILocationDAO {
     @Override
     public void generateAgence() {
 
+
+
     }
 }

@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Veuillez vous connecter"
+        android:text="@string/authentication"
         style="@style/Base.TextAppearance.AppCompat.Headline"/>
     <EditText
         android:id="@+id/login"
@@ -19,15 +19,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Mot de passe"/>
+        android:hint="@string/password"/>
     <Button
         android:id="@+id/btn_connexion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Se connecter"/>
+        android:text="@string/sign_in"/>
     <Button
         android:id="@+id/redirect_inscription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Inscription"/>
+        android:text="@string/sign_up"/>
 </LinearLayout>

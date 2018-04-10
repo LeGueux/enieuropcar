@@ -10,6 +10,7 @@ public class Utilisateur {
     private String login;
     private String password;
     private String email;
+    private Agence agenceId;
 
     public Utilisateur() {
     }
@@ -51,5 +52,13 @@ public class Utilisateur {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Agence getAgenceId() {
+        return agenceId;
+    }
+
+    public void setAgenceId(Agence agenceId) {
+        this.agenceId = agenceId;
     }
 }
