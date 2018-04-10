@@ -25,6 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"/>
+    <EditText
+        android:id="@+id/inscr_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Token de sécurité"/>
     <Button
         android:id="@+id/btn_inscription"
         android:layout_width="match_parent"

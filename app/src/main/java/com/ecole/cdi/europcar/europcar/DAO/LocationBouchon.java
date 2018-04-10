@@ -1,10 +1,15 @@
 package com.ecole.cdi.europcar.europcar.DAO;
 
 import com.ecole.cdi.europcar.europcar.Entity.Agence;
+import com.ecole.cdi.europcar.europcar.Entity.Reservation;
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LocationBouchon implements ILocationDAO {
@@ -67,5 +72,29 @@ public class LocationBouchon implements ILocationDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Reservation> getListReservation() throws ParseException {
+
+        List<Reservation> reservations = new ArrayList<Reservation>();
+        List<Vehicule> v = getListVehicule();
+
+        Agence agence= new Agence(1, "test", "123456", "voie test", "14000", "Caen");
+
+        for(int i =0; i < v.size();i++){
+            SimpleDateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy");
+            int dateDebut = Integer.parseInt(new Timestamp(new Date().getTime()).toString());
+            Date dateFinParse = dateformat.parse("18/04/2018");
+
+            int dateFin = Integer.parseInt(new Timestamp(dateFinParse.getTime()).toString());
+
+            reservations.add(new Reservation(1,v.get(i),agence,dateDebut,dateFin,
+                    10.0F,true));
+        }
+
+
+
+        return reservations;
     }
 }

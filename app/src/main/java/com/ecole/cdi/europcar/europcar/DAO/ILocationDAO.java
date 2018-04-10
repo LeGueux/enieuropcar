@@ -20,6 +20,4 @@ public interface ILocationDAO {
     public Agence modifierAgence(Agence agence);
 
     public void generateAgence();
-
-    public Vehicule getVehiculeById(int id);
 }

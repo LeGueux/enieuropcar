@@ -46,9 +46,4 @@ public class LocationSQL implements ILocationDAO {
     public void generateAgence() {
 
     }
-
-    @Override
-    public Vehicule getVehiculeById(int id) {
-        return null;
-    }
 }
