@@ -32,12 +32,21 @@ public class VehiculeAdapter extends ArrayAdapter<Vehicule> {
         }
 
         Vehicule vehicule = this.getItem(position);
-        TextView marqueVoiture = convertView.findViewById(R.id.marque_voiture);
-        TextView modeleVoiture = convertView.findViewById(R.id.modele_voiture);
-        TextView immatriculationVoiture = convertView.findViewById(R.id.immatriculation_voiture);
-        marqueVoiture.setText(vehicule.getMarque());
-        modeleVoiture.setText(vehicule.getModele());
-        immatriculationVoiture.setText(vehicule.getImmatriculation());
+        TextView idVehicule = convertView.findViewById(R.id.id_vehicule);
+        TextView modeleVehicule = convertView.findViewById(R.id.modele_vehicule);
+        TextView nbPlacesVehicule = convertView.findViewById(R.id.nb_places_vehicule);
+        TextView locMinVehicule = convertView.findViewById(R.id.location_min_vehicule);
+        TextView locMaxVehicule = convertView.findViewById(R.id.location_max_vehicule);
+        TextView tarifMinVehicule = convertView.findViewById(R.id.tarif_min_vehicule);
+        TextView tarifMaxVehicule = convertView.findViewById(R.id.tarif_max_vehicule);
+
+        idVehicule.setText(String.valueOf(vehicule.getId()));
+        modeleVehicule.setText(vehicule.getModele());
+        nbPlacesVehicule.setText(String.valueOf(vehicule.getNbPlaces()));
+        locMinVehicule.setText(String.valueOf(vehicule.getLocationMin()));
+        locMaxVehicule.setText(String.valueOf(vehicule.getLocationMax()));
+        tarifMinVehicule.setText(String.valueOf(vehicule.getLocationMin()));
+        tarifMaxVehicule.setText(String.valueOf(vehicule.getLocationMax()));
 
         return convertView;
     }

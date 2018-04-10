@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button boutonInscription = findViewById(R.id.bouton_inscription);
-        boutonInscription.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -50,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
 
     @Override
     public void onRedirectInscription() {
-
         Intent intent = new Intent(MainActivity.this,InscriptionActivity.class);
         startActivity(intent);
     }
