@@ -22,7 +22,7 @@ public class InscriptionActivity extends AppCompatActivity implements Inscriptio
 
         Utilisateur user = new Utilisateur(2,login,password,email);
 
-        Utilisateur user2 = LocationService.getInstance().inscription(user);
+         Utilisateur user2 = LocationService.getInstance().inscription(user);
 
         Toast.makeText(this,
                 "Inscription terminée : " + user2.getLogin() + " - " + user2.getEmail(),

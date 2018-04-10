@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
             Toast.makeText(this,
                     "Connexion validée : " + login + " - " + user.getEmail(),
                     Toast.LENGTH_SHORT).show();
-
             Intent intent = new Intent(MainActivity.this, ListeVehiculesActivity.class);
             startActivity(intent);
         }else{
@@ -47,6 +46,12 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
                     "Connexion refusée",
                     Toast.LENGTH_SHORT).show();
         }
+    }
 
+    @Override
+    public void onRedirectInscription() {
+
+        Intent intent = new Intent(MainActivity.this,InscriptionActivity.class);
+        startActivity(intent);
     }
 }

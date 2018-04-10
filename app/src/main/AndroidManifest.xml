@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.InscriptionActivity"></activity>
-        <activity android:name=".Activity.ListeVehiculesActivity"></activity>
+        <activity android:name=".Activity.InscriptionActivity" />
+        <activity android:name=".Activity.ListeVehiculesActivity" />
+        <activity android:name=".Activity.ModifierAgenceActivity"></activity>
     </application>
 
 </manifest>

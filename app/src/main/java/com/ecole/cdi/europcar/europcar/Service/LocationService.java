@@ -41,7 +41,9 @@ public class LocationService {
         return true;
     }
 
-    public void modifierAgence(Agence agence) {
+    public Agence modifierAgence(Agence agence) {
+
+        return dao.modifierAgence(agence);
     }
 
     public void generateAgence() {
