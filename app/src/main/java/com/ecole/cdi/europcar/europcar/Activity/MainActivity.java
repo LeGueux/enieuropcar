@@ -1,7 +1,10 @@
 package com.ecole.cdi.europcar.europcar.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.ecole.cdi.europcar.europcar.Fragment.ConnexionFragment;
@@ -18,6 +21,14 @@ public class MainActivity extends AppCompatActivity implements ConnexionFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button boutonInscription = findViewById(R.id.bouton_inscription);
+        boutonInscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
