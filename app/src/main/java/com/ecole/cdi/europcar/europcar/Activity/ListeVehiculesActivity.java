@@ -1,5 +1,6 @@
 package com.ecole.cdi.europcar.europcar.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -34,6 +35,8 @@ public class ListeVehiculesActivity extends AppCompatActivity implements ListeVe
 
     @Override
     public void clickOnVehicule(Vehicule v) {
-
+        Intent intent = new Intent(ListeVehiculesActivity.this, VehiculeActivity.class);
+        intent.putExtra("idVehicule", v.getId());
+        startActivity(intent);
     }
 }

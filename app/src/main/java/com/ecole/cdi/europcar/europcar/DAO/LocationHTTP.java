@@ -43,4 +43,9 @@ public class LocationHTTP implements ILocationDAO {
     public void generateAgence() {
 
     }
+
+    @Override
+    public Vehicule getVehiculeById(int id) {
+        return null;
+    }
 }

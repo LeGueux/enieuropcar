@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Activity.InscriptionActivity" />
         <activity android:name=".Activity.ListeVehiculesActivity" />
-        <activity android:name=".Activity.ModifierAgenceActivity"></activity>
+        <activity android:name=".Activity.ModifierAgenceActivity" />
+        <activity android:name=".Activity.VehiculeActivity"></activity>
     </application>
 
 </manifest>

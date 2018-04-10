@@ -49,4 +49,8 @@ public class LocationService {
     public void generateAgence() {
 
     }
+
+    public Vehicule getVehiculeById(int id) {
+        return dao.getVehiculeById(id);
+    }
 }
