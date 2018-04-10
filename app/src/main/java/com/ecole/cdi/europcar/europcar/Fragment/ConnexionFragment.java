@@ -22,6 +22,7 @@ public class ConnexionFragment extends Fragment {
     private String mParam2;
 
     private Button connecter;
+    private Button inscription;
     private EditText login;
     private EditText mdp;
 
@@ -49,6 +50,7 @@ public class ConnexionFragment extends Fragment {
         this.login = v.findViewById(R.id.login);
         this.mdp = v.findViewById(R.id.password);
         this.connecter = v.findViewById(R.id.btn_connexion);
+        this.inscription = v.findViewById(R.id.redirect_inscription);
         this.connecter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +61,13 @@ public class ConnexionFragment extends Fragment {
                 } else {
                     mListener.onConnexion(login.getText().toString(),mdp.getText().toString());
                 }
+            }
+        });
+
+        this.inscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListener.onRedirectInscription();
             }
         });
 
@@ -86,5 +95,6 @@ public class ConnexionFragment extends Fragment {
 
     public interface OnConnexionListener {
         void onConnexion(String login, String mdp);
+        void onRedirectInscription();
     }
 }

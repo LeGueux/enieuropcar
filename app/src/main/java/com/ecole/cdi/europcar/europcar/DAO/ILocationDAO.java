@@ -17,7 +17,7 @@ public interface ILocationDAO {
 
     public Boolean rendre(Vehicule vehicule, Utilisateur user);
 
-    public void modifierAgence(Agence agence);
+    public Agence modifierAgence(Agence agence);
 
     public void generateAgence();
 }

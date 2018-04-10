@@ -33,7 +33,9 @@ public class LocationHTTP implements ILocationDAO {
     }
 
     @Override
-    public void modifierAgence(Agence agence) {
+    public Agence modifierAgence(Agence agence) {
+
+        return agence;
 
     }
 
