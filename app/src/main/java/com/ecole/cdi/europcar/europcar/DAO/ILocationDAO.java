@@ -1,6 +1,7 @@
 package com.ecole.cdi.europcar.europcar.DAO;
 
 import com.ecole.cdi.europcar.europcar.Entity.Agence;
+import com.ecole.cdi.europcar.europcar.Entity.Reservation;
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 
@@ -20,4 +21,8 @@ public interface ILocationDAO {
     public Agence modifierAgence(Agence agence);
 
     public void generateAgence();
+
+    public List<Reservation> getListReservation();
+
+    public Vehicule getVehiculeById(int id);
 }

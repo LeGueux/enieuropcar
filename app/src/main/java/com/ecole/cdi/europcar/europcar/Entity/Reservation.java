@@ -9,15 +9,15 @@ public class Reservation {
     private long id;
     private Vehicule vehiculeId;
     private Agence agenceId;
-    private int dateDebut;
-    private int dateFin;
+    private long dateDebut;
+    private long dateFin;
     private float tarifJournalier;
     private boolean isEnCours;
 
     public Reservation() {
     }
 
-    public Reservation(long id, Vehicule vehiculeId, Agence agenceId, int dateDebut, int dateFin, float tarifJournalier,
+    public Reservation(long id, Vehicule vehiculeId, Agence agenceId, long dateDebut, long dateFin, float tarifJournalier,
                        boolean isEnCours) {
         this.id = id;
         this.vehiculeId = vehiculeId;
@@ -52,19 +52,19 @@ public class Reservation {
         this.agenceId = agenceId;
     }
 
-    public int getDateDebut() {
+    public long getDateDebut() {
         return dateDebut;
     }
 
-    public void setDateDebut(int dateDebut) {
+    public void setDateDebut(long dateDebut) {
         this.dateDebut = dateDebut;
     }
 
-    public int getDateFin() {
+    public long getDateFin() {
         return dateFin;
     }
 
-    public void setDateFin(int dateFin) {
+    public void setDateFin(long dateFin) {
         this.dateFin = dateFin;
     }
 

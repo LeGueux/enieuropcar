@@ -75,7 +75,7 @@ public class LocationBouchon implements ILocationDAO {
     }
 
     @Override
-    public List<Reservation> getListReservation() throws ParseException {
+    public List<Reservation> getListReservation(){
 
         List<Reservation> reservations = new ArrayList<Reservation>();
         List<Vehicule> v = getListVehicule();
@@ -83,13 +83,13 @@ public class LocationBouchon implements ILocationDAO {
         Agence agence= new Agence(1, "test", "123456", "voie test", "14000", "Caen");
 
         for(int i =0; i < v.size();i++){
-            SimpleDateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy");
-            int dateDebut = Integer.parseInt(new Timestamp(new Date().getTime()).toString());
-            Date dateFinParse = dateformat.parse("18/04/2018");
 
-            int dateFin = Integer.parseInt(new Timestamp(dateFinParse.getTime()).toString());
+           SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+            Date dateDebut = new Date(System.currentTimeMillis());
 
-            reservations.add(new Reservation(1,v.get(i),agence,dateDebut,dateFin,
+            long debut = dateDebut.getTime();
+
+            reservations.add(new Reservation(1,v.get(i),agence,debut,0,
                     10.0F,true));
         }
 

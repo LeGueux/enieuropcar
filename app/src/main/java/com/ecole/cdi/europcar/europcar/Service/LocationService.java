@@ -3,6 +3,7 @@ package com.ecole.cdi.europcar.europcar.Service;
 import com.ecole.cdi.europcar.europcar.DAO.ILocationDAO;
 import com.ecole.cdi.europcar.europcar.DAO.LocationBouchon;
 import com.ecole.cdi.europcar.europcar.Entity.Agence;
+import com.ecole.cdi.europcar.europcar.Entity.Reservation;
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 
@@ -27,6 +28,10 @@ public class LocationService {
 
     public Utilisateur inscription(Utilisateur user) {
         return user;
+    }
+
+    public List<Reservation> getListeReservation() {
+        return dao.getListReservation();
     }
 
     public List<Vehicule> getListVehicule() {

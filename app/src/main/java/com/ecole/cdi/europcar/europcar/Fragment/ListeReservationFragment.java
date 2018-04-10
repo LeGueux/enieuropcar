@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.ecole.cdi.europcar.europcar.Adapter.ReservationAdapter;
+import com.ecole.cdi.europcar.europcar.Adapter.VehiculeAdapter;
 import com.ecole.cdi.europcar.europcar.Entity.Reservation;
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 import com.ecole.cdi.europcar.europcar.R;
@@ -89,6 +91,16 @@ public class ListeReservationFragment extends Fragment {
         return v;
     }
 
+    public void setListe(List<Reservation> r) {
+        this.reservations = r;
+        ListView listeReservation = this.getView().findViewById(R.id.liste_reservations);
+
+        ReservationAdapter adapter = new ReservationAdapter(
+                this.getContext(),
+                R.layout.ligne_reservation,
+                reservations);
+        listeReservation.setAdapter(adapter);
+    }
 
     @Override
     public void onAttach(Context context) {

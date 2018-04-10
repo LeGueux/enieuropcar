@@ -46,9 +46,9 @@ public class ReservationAdapter extends ArrayAdapter<Reservation> {
         TextView dateFin = convertView.findViewById(R.id.date_fin);
         TextView tarif = convertView.findViewById(R.id.tarif_journalier);
 
-        id.setText(String.valueOf(reservation.getId()));
-        dateDebut.setText(reservation.getDateDebut());
-        dateFin.setText(reservation.getDateFin());
+        id.setText(String.valueOf(reservation.getVehiculeId().getId()));
+        dateDebut.setText(String.valueOf(reservation.getDateDebut()));
+        dateFin.setText(String.valueOf(reservation.getDateFin()));
         tarif.setText(String.valueOf(reservation.getTarifJournalier()));
 
         return convertView;
