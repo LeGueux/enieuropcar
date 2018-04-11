@@ -1,6 +1,7 @@
 package com.ecole.cdi.europcar.europcar.DAO;
 
 import com.ecole.cdi.europcar.europcar.Entity.Agence;
+import com.ecole.cdi.europcar.europcar.Entity.Reservation;
 import com.ecole.cdi.europcar.europcar.Entity.Utilisateur;
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 
@@ -42,6 +43,11 @@ public class LocationHTTP implements ILocationDAO {
     @Override
     public void generateAgence() {
 
+    }
+
+    @Override
+    public List<Reservation> getListReservation() {
+        return null;
     }
 
     @Override
