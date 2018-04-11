@@ -15,6 +15,7 @@ import java.util.List;
 public class ListeVehiculesActivity extends AppCompatActivity implements ListeVehiculeFragment.OnClickVehiculeListener {
 
     private ListeVehiculeFragment fragment;
+    private List<Vehicule> vehicules;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +29,10 @@ public class ListeVehiculesActivity extends AppCompatActivity implements ListeVe
         fragment = (ListeVehiculeFragment) getSupportFragmentManager().findFragmentById(R.id.fragement_liste_vehicules);
 
         LocationService locationService = LocationService.getInstance();
+        this.vehicules = locationService.getListVehicule();
 
         // Donner au fragment la liste de voiture à afficher
-        fragment.setListe(locationService.getListVehicule());
+        fragment.setListe(this.vehicules);
     }
 
     @Override
