@@ -15,9 +15,11 @@ import java.util.List;
 public class LocationBouchon implements ILocationDAO {
 
     private List<Vehicule> vehicules;
+    private List<Reservation> reservations;
 
     public LocationBouchon() {
         this.vehicules = new ArrayList<>();
+        this.reservations = new ArrayList<>();
     }
 
     @Override
@@ -78,23 +80,30 @@ public class LocationBouchon implements ILocationDAO {
     @Override
     public List<Reservation> getListReservation(){
 
-        List<Reservation> reservations = new ArrayList<Reservation>();
-        List<Vehicule> v = getListVehicule();
+        this.reservations = new ArrayList<>();
+
+        vehicules = getListVehicule();
 
         Agence agence= new Agence(1, "test", "123456", "voie test", "14000", "Caen");
 
-        for(int i =0; i < v.size();i++){
+        for(int i =0; i < vehicules.size();i++){
 
            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             Date dateDebut = new Date(System.currentTimeMillis());
+            Date dateFinParse = new Date();
+            try {
+                dateFinParse = sdf.parse("18-04-2018");
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
 
             long debut = dateDebut.getTime();
+            Long fin = dateFinParse.getTime();
 
-            reservations.add(new Reservation(1,v.get(i),agence,debut,0,
+            reservations.add(new Reservation(1,vehicules.get(i),agence,debut,fin,
                     10.0F,true));
         }
-
-
 
         return reservations;
     }

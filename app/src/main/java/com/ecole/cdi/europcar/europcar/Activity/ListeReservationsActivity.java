@@ -9,10 +9,14 @@ import com.ecole.cdi.europcar.europcar.Fragment.ListeVehiculeFragment;
 import com.ecole.cdi.europcar.europcar.R;
 import com.ecole.cdi.europcar.europcar.Service.LocationService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListeReservationsActivity extends AppCompatActivity
         implements ListeReservationFragment.OnClickReservationListener{
 
     private ListeReservationFragment fragment;
+    private List<Reservation> reservations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +31,12 @@ public class ListeReservationsActivity extends AppCompatActivity
 
         LocationService locationService = LocationService.getInstance();
 
-        // Donner au fragment la liste de voiture à afficher
-        fragment.setListe(locationService.getListeReservation());
+        this.reservations = new ArrayList<>();
+
+        reservations = locationService.getListeReservation();
+
+        // Donner au fragment la liste de reservation à afficher
+        fragment.setListe(this.reservations);
     }
 
     @Override
