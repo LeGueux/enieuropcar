@@ -42,7 +42,7 @@ public class ListeVehiculesActivity extends AppCompatActivity implements ListeVe
 
     @Override
     public void clickOnVehicule(Vehicule v) {
-        Intent intent = new Intent(ListeVehiculesActivity.this, VehiculeActivity.class);
+        Intent intent = new Intent(ListeVehiculesActivity.this, ReservationActivity.class);
         intent.putExtra("idVehicule", v.getId());
         startActivity(intent);
     }

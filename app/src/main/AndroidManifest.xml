@@ -21,6 +21,7 @@
         <activity android:name=".Activity.ModifierAgenceActivity"></activity>
         <activity android:name=".Activity.VehiculeActivity"></activity>
         <activity android:name=".Activity.ListeReservationsActivity"></activity>
+        <activity android:name=".Activity.ReservationActivity"></activity>
     </application>
 
 </manifest>
