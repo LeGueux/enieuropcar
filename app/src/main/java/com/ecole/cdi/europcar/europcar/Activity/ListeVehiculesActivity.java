@@ -3,6 +3,7 @@ package com.ecole.cdi.europcar.europcar.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 import com.ecole.cdi.europcar.europcar.Fragment.ListeVehiculeFragment;
@@ -16,11 +17,14 @@ public class ListeVehiculesActivity extends AppCompatActivity implements ListeVe
 
     private ListeVehiculeFragment fragment;
     private List<Vehicule> vehicules;
+    private LocationService locationService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_vehicules);
+
+        this.locationService = LocationService.getInstance();
     }
 
     @Override
@@ -28,8 +32,9 @@ public class ListeVehiculesActivity extends AppCompatActivity implements ListeVe
         super.onResume();
         fragment = (ListeVehiculeFragment) getSupportFragmentManager().findFragmentById(R.id.fragement_liste_vehicules);
 
-        LocationService locationService = LocationService.getInstance();
-        this.vehicules = locationService.getListVehicule();
+        this.vehicules = new ArrayList<>();
+        this.vehicules = this.locationService.getListVehicule();
+        Log.e("nb vehicules", "nb : " + this.vehicules.size());
 
         // Donner au fragment la liste de voiture à afficher
         fragment.setListe(this.vehicules);
