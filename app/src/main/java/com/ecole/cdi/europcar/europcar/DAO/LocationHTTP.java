@@ -10,6 +10,7 @@ import java.util.List;
 public class LocationHTTP implements ILocationDAO {
     @Override
     public Utilisateur connexion(String username, String password) {
+
         return null;
     }
 
@@ -52,6 +53,11 @@ public class LocationHTTP implements ILocationDAO {
 
     @Override
     public Vehicule getVehiculeById(int id) {
+        return null;
+    }
+
+    @Override
+    public Reservation reservation(Reservation r) {
         return null;
     }
 }

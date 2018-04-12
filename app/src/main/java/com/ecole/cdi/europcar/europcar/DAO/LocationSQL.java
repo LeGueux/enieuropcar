@@ -57,4 +57,9 @@ public class LocationSQL implements ILocationDAO {
     public Vehicule getVehiculeById(int id) {
         return null;
     }
+
+    @Override
+    public Reservation reservation(Reservation r) {
+        return null;
+    }
 }

@@ -1,77 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:padding="15dp">
 
-    <TextView
-        android:id="@+id/id_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="idVehicule"/>
-    <TextView
-        android:id="@+id/libelle_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="libelle"/>
-    <TextView
-        android:id="@+id/nbPlaces_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="nombres places"/>
-    <TextView
-        android:id="@+id/location_min_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Location min"/>
 
-    <TextView
-        android:id="@+id/location_max_vehicule_reservation"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Location max"/>
-    <TextView
-        android:id="@+id/tarif_min_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tarif min"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp">
 
-    <TextView
-        android:id="@+id/tarif_max_vehicule_reservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tarif max"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:text="Caractéristiques du véhicule"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/id_vehicule_reservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="idVehicule" />
+
+            <TextView
+                android:id="@+id/libelle_vehicule_reservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="libelle" />
+             <TextView
+                 android:id="@+id/nbPlaces_vehicule_reservation"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="nombres places"/>
+             <TextView
+                 android:id="@+id/location_min_vehicule_reservation"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Location min"/>
+
+             <TextView
+                 android:id="@+id/location_max_vehicule_reservation"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Location max"/>
+             <TextView
+                 android:id="@+id/tarif_min_vehicule_reservation"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Tarif min"/>
+
+             <TextView
+                 android:id="@+id/tarif_max_vehicule_reservation"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Tarif max"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
 
     <EditText
         android:id="@+id/add_debut_reservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date début"/>
+        android:hint="Date début"
+        android:inputType="date" />
 
 
     <EditText
         android:id="@+id/add_fin_reservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date fin"/>
+        android:hint="Date fin"
+        android:inputType="date" />
 
 
     <EditText
         android:id="@+id/add_tarif_reservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Tarif journalier"/>
+        android:hint="Tarif journalier"
+        android:inputType="numberDecimal" />
 
 
     <Button
         android:id="@+id/reserver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Réserver"/>
+        android:layout_marginTop="25dp"
+        android:background="#4DB6AC"
+        android:text="Réserver"
+        android:textColor="#ffffff" />
 
 </LinearLayout>

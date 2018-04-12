@@ -25,9 +25,13 @@ public class LocationBouchon implements ILocationDAO {
     @Override
     public Utilisateur connexion(String username, String password) {
 
-        Utilisateur user = new Utilisateur(1,"bourdel","azerty","theo.bourdel@gmail.com");
+        if (username.equals("bourdel")) {
+            Utilisateur user = new Utilisateur(1,"bourdel","azerty","theo.bourdel@gmail.com");
 
-        return user;
+            return user;
+        }
+
+        return null;
     }
 
     @Override
@@ -75,6 +79,11 @@ public class LocationBouchon implements ILocationDAO {
             }
         }
         return null;
+    }
+
+    @Override
+    public Reservation reservation(Reservation r) {
+        return r;
     }
 
     @Override

@@ -3,12 +3,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account"
-        style="@style/Base.TextAppearance.AppCompat.Headline"/>
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:padding="15dp"/>
     <EditText
         android:id="@+id/inscr_login"
         android:layout_width="match_parent"
@@ -34,5 +36,7 @@
         android:id="@+id/btn_inscription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit_account"/>
+        android:text="@string/submit_account"
+        android:background="#4DB6AC"
+        android:layout_marginTop="25dp"/>
 </LinearLayout>

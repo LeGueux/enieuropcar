@@ -26,6 +26,10 @@ public class LocationService {
         return user;
     }
 
+    public Reservation reservation(Reservation r){
+        return r;
+    }
+
     public Utilisateur inscription(Utilisateur user) {
         return user;
     }

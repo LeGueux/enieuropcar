@@ -25,4 +25,6 @@ public interface ILocationDAO {
     public List<Reservation> getListReservation();
 
     public Vehicule getVehiculeById(int id);
+
+    public Reservation reservation(Reservation r);
 }

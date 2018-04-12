@@ -15,7 +15,8 @@ public class Vehicule {
     public Vehicule() {
     }
 
-    public Vehicule(int id, int nbPlaces, int locationMin, int locationMax, String modele, float tarifMin, float tarifMax, float tarifMoyen, boolean isDisponible) {
+    public Vehicule(int id, int nbPlaces, int locationMin, int locationMax, String modele, float tarifMin,
+                    float tarifMax, float tarifMoyen, boolean isDisponible) {
         this.id = id;
         this.nbPlaces = nbPlaces;
         this.locationMin = locationMin;
@@ -26,6 +27,17 @@ public class Vehicule {
         this.tarifMoyen = tarifMoyen;
         this.isDisponible = isDisponible;
     }
+    public Vehicule(int id, int nbPlaces, int locationMin, int locationMax, String modele, float tarifMin,
+                    float tarifMax) {
+        this.id = id;
+        this.nbPlaces = nbPlaces;
+        this.locationMin = locationMin;
+        this.locationMax = locationMax;
+        this.modele = modele;
+        this.tarifMin = tarifMin;
+        this.tarifMax = tarifMax;
+    }
+
 
     public int getId() {
         return id;

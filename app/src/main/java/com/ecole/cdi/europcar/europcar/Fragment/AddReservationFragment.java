@@ -7,9 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ecole.cdi.europcar.europcar.Entity.Agence;
+import com.ecole.cdi.europcar.europcar.Entity.Vehicule;
 import com.ecole.cdi.europcar.europcar.R;
+import com.ecole.cdi.europcar.europcar.Service.LocationService;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,7 +42,14 @@ public class AddReservationFragment extends Fragment {
     private TextView tarifMin;
     private TextView tarifMax;
 
+    private EditText dateDebut;
+    private EditText dateFin;
+    private EditText tarifJournalier;
+    private Button reserver;
+
     private OnReservationListener mListener;
+
+    private LocationService locationService;
 
     public AddReservationFragment() {
         // Required empty public constructor
@@ -84,6 +96,20 @@ public class AddReservationFragment extends Fragment {
         tarifMin = v.findViewById(R.id.tarif_min_vehicule_reservation);
         tarifMax = v.findViewById(R.id.tarif_max_vehicule_reservation);
 
+        dateDebut = v.findViewById(R.id.add_debut_reservation);
+        dateFin = v.findViewById(R.id.add_fin_reservation);
+        tarifJournalier = v.findViewById(R.id.add_tarif_reservation);
+        reserver = v.findViewById(R.id.reserver);
+
+        reserver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mListener.onReservation(dateDebut,dateFin,tarifJournalier);
+
+            }
+        });
+
         mListener.onGetVehiculeReservation(idVehicule,libelle,nbPlaces,locationMin,locationMax,tarifMin,tarifMax);
 
         return v;
@@ -120,5 +146,6 @@ public class AddReservationFragment extends Fragment {
         // TODO: Update argument type and name
         void onGetVehiculeReservation(TextView id, TextView libelle, TextView places, TextView lmin, TextView lmax,
                                       TextView tmin, TextView tmax);
+        void onReservation(TextView debut, TextView fin, TextView tarif);
     }
 }

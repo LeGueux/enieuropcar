@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://C:\Users\Administrateur\AndroidStudioProjects\enieuropcar\Europcar.iml" filepath="C:\Users\Administrateur\AndroidStudioProjects\enieuropcar\Europcar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Administrateur\AndroidStudioProjects\enieuropcar\app\app.iml" filepath="C:\Users\Administrateur\AndroidStudioProjects\enieuropcar\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/enieuropcar.iml" filepath="$PROJECT_DIR$/enieuropcar.iml" />
       <module fileurl="file://C:\Users\Administrateur\Downloads\Europcar\enieuropcar.iml" filepath="C:\Users\Administrateur\Downloads\Europcar\enieuropcar.iml" />
     </modules>

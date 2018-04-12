@@ -17,8 +17,8 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(long id, Vehicule vehiculeId, Agence agenceId, long dateDebut, long dateFin, float tarifJournalier,
-                       boolean isEnCours) {
+    public Reservation(long id, Vehicule vehiculeId, Agence agenceId, long dateDebut, long dateFin,
+                       float tarifJournalier,boolean isEnCours) {
         this.id = id;
         this.vehiculeId = vehiculeId;
         this.agenceId = agenceId;

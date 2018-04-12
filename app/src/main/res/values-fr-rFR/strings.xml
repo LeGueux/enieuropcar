@@ -12,5 +12,8 @@
     <string name="create_account">Créer votre compte utilisateur</string>
     <string name="submit_account">Créer un compte</string>
 
+    <string name="city">Ville</string>
+    <string name="zip">Code postal</string>
+
     <!-- !-->
 </resources>
